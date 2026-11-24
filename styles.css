@@ -458,12 +458,10 @@ body::after {
   content: "";
   position: absolute;
   z-index: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: clamp(260px, 34vh, 390px);
+  inset: 0;
+  height: auto;
   pointer-events: none;
-  background: url("assets/backgrounds/bimbom.png") center top / cover no-repeat;
+  background: url("assets/backgrounds/bimbom.png") center center / cover no-repeat;
   opacity: .22;
   mix-blend-mode: screen;
 }
