@@ -334,6 +334,16 @@ body::after {
   min-height: 58px;
   background-image: url("assets/ui/step-4.png");
 }
+.step__card--five {
+  width: 330px;
+  min-height: 68px;
+  background-image: url("assets/ui/step-4.png");
+}
+.step__optional {
+  display: inline-block;
+  margin-right: 4px;
+  color: #f5c1ff;
+}
 .step__card code { font: inherit; }
 
 .site-footer {
@@ -476,6 +486,7 @@ body::after {
   .step__card--two { width: min(250px, 82vw); min-height: 96px; }
   .step__card--three { width: min(255px, 84vw); min-height: 119px; }
   .step__card--four { width: 165px; min-height: 56px; }
+  .step__card--five { width: min(310px, 86vw); min-height: 68px; font-size: 10px; }
   .site-footer { padding-inline: 24px; }
   .site-footer__notice { font-size: 11px; }
 }
