@@ -134,9 +134,12 @@ a { color: inherit; }
   background-position: center;
   background-size: 100% 100%;
   image-rendering: pixelated;
-  transition: transform .16s ease, filter .16s ease;
+  transition: transform .42s cubic-bezier(.18, .89, .32, 1.18), filter .3s ease;
+  transform-origin: center;
 }
-.image-button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.image-button:hover { transform: translateY(-3px) scale(1.015); filter: brightness(1.08); }
+.image-button:active { transform: translateY(0) scale(.985); transition-duration: .12s; }
+.image-button:focus-visible { outline: 2px solid rgba(255,255,255,.9); outline-offset: 4px; }
 .image-button--telegram {
   min-width: 238px;
   background-image: url("assets/ui/btn-telegram.png");
@@ -164,7 +167,12 @@ a { color: inherit; }
   text-decoration: none;
   text-shadow: 2px 2px 0 rgba(111, 28, 103, .55);
   cursor: pointer;
+  transition: transform .44s cubic-bezier(.18, .89, .32, 1.18), filter .3s ease;
+  transform-origin: center;
 }
+.server-address:hover { transform: translateX(-50%) translateY(-3px) scale(1.015); filter: brightness(1.08); }
+.server-address:active { transform: translateX(-50%) scale(.985); transition-duration: .12s; }
+.server-address:focus-visible { outline: 2px solid rgba(255,255,255,.9); outline-offset: 5px; }
 .server-address__hint {
   position: absolute;
   left: 50%;
@@ -355,7 +363,11 @@ a { color: inherit; }
     border-radius: 5px;
     background: rgba(113, 38, 119, .35);
     cursor: pointer;
+    transition: transform .4s cubic-bezier(.18, .89, .32, 1.18), background-color .25s ease;
   }
+  .menu-toggle:hover { transform: translateY(-2px); background-color: rgba(113, 38, 119, .5); }
+  .menu-toggle:active { transform: scale(.94); transition-duration: .12s; }
+  .menu-toggle:focus-visible { outline: 2px solid rgba(255,255,255,.9); outline-offset: 3px; }
   .menu-toggle span:not(.visually-hidden) { display: block; height: 2px; width: 100%; background: #fff; }
   .main-nav {
     position: absolute;
