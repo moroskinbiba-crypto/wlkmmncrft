@@ -247,8 +247,9 @@ a { color: inherit; }
 .step__download { text-decoration: none; cursor: pointer; }
 .step__download:hover { filter: brightness(1.08); }
 .step__card--one {
-  width: 150px;
-  min-height: 60px;
+  width: 220px;
+  min-height: 78px;
+  font-size: 15px;
   background-image: url("assets/ui/step-1.png");
 }
 .step__card--two {
@@ -389,7 +390,7 @@ a { color: inherit; }
   .step { padding-left: 12px; }
   .step__number { left: -3px; font-size: 45px; }
   .step__card { font-size: 9px; padding-left: 20px; }
-  .step__card--one { width: 144px; min-height: 57px; }
+  .step__card--one { width: 205px; min-height: 72px; font-size: 13px; }
   .step__card--two { width: min(250px, 82vw); min-height: 96px; }
   .step__card--three { width: min(255px, 84vw); min-height: 119px; }
   .step__card--four { width: 165px; min-height: 56px; }
