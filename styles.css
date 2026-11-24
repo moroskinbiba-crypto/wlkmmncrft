@@ -1,6 +1,6 @@
 :root {
-  --pixel-font: "Silkscreen", "Courier New", monospace;
-  --display-font: "Pixelify Sans", "Silkscreen", monospace;
+  --pixel-font: "Tiny5", sans-serif;
+  --display-font: "Press Start 2P", monospace;
   --body-font: Arial, Helvetica, sans-serif;
   --purple: #70227f;
   --orange: #f27b55;
