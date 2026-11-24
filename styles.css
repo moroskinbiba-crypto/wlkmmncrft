@@ -536,3 +536,16 @@ body::after {
   filter: drop-shadow(0 3px 7px rgba(27, 238, 255, .42));
   will-change: transform, opacity;
 }
+
+
+@media (max-width: 520px) {
+  .hero::after {
+    width: 88vw;
+    background: linear-gradient(
+      90deg,
+      rgba(18, 8, 28, .68) 0%,
+      rgba(25, 10, 36, .45) 62%,
+      rgba(25, 10, 36, 0) 100%
+    );
+  }
+}
