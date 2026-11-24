@@ -664,3 +664,29 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .hero__character { animation: none; }
 }
+
+
+/* Компактные векторные иконки внутри кнопок. */
+.button-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 1.18em;
+  height: 1.18em;
+  color: currentColor;
+  overflow: visible;
+}
+.button-icon--download {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.button-icon--telegram {
+  fill: currentColor;
+}
+.main-nav a[href="#download"],
+.image-button--telegram,
+.step__download {
+  gap: .55em;
+}
