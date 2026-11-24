@@ -690,3 +690,12 @@ button:focus-visible {
 .step__download {
   gap: .55em;
 }
+
+
+/* Пустая область контентного слоя не должна перехватывать клик по Стиву. */
+.hero__content {
+  pointer-events: none;
+}
+.hero__content .image-button {
+  pointer-events: auto;
+}
