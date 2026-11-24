@@ -45,12 +45,14 @@ a { color: inherit; }
   position: fixed;
   z-index: 9999;
   right: -3%;
-  bottom: 8vh;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
   width: min(68vw, 850px);
   height: 94vh;
   max-height: 980px;
   object-fit: contain;
-  object-position: right bottom;
+  object-position: right center;
   image-rendering: pixelated;
   pointer-events: none;
   will-change: transform;
@@ -290,7 +292,7 @@ a { color: inherit; }
   .hero__content { margin-top: 35px; }
   .hero__lead { font-size: 18px; width: 340px; }
   .hero__about { margin-top: 105px; width: 350px; font-size: 14px; }
-  .hero__character { right: 2%; width: min(47%, 680px); bottom: 12vh; }
+  .hero__character { right: 2%; top: 50%; bottom: auto; transform: translateY(-50%); width: min(47%, 680px); object-position: right center; }
   .install { min-height: 760px; padding-top: 66px; }
   .steps { gap: 39px; }
 }
@@ -306,7 +308,10 @@ a { color: inherit; }
     height: 82vh;
     max-height: 760px;
     right: -20%;
-    bottom: 8vh;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    object-position: right center;
     opacity: .96;
   }
   .site-header { align-items: flex-start; }
@@ -364,7 +369,7 @@ a { color: inherit; }
   .hero__content { margin-top: 26px; }
   .hero__lead { width: 58%; max-width: 270px; font-size: 13px; }
   .hero__lead--second { margin-top: 16px; }
-  .hero__character { width: 100vw; height: 76vh; right: -32%; bottom: 9vh; max-height: 700px; opacity: .9; }
+  .hero__character { width: 100vw; height: 76vh; right: -32%; top: 50%; bottom: auto; transform: translateY(-50%); object-position: right center; max-height: 700px; opacity: .9; }
   .hero__about { position: relative; z-index: 1; width: 61%; margin-top: 82px; font-size: 9px; }
   .hero__actions { position: relative; z-index: 1; margin-top: 30px; }
   .image-button { font-size: 12px; }
