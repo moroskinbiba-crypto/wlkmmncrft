@@ -390,3 +390,37 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* Shared color-grade overlays: bring the two background assets into one palette. */
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 76%,
+    rgba(203, 75, 112, .12) 88%,
+    rgba(203, 75, 112, .22) 100%
+  );
+}
+
+.install::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(203, 75, 112, .22) 0%,
+    rgba(203, 75, 112, .12) 14%,
+    transparent 38%
+  );
+}
+
+.install__inner {
+  position: relative;
+  z-index: 1;
+}
