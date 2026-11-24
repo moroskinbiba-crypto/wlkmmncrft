@@ -30,7 +30,6 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-  isolation: isolate;
   min-height: 730px;
   overflow: visible;
   padding: 30px max(7.6vw, 28px) 46px;
@@ -38,15 +37,15 @@ a { color: inherit; }
 }
 .hero__background {
   position: absolute;
-  z-index: -3;
+  z-index: 0;
   inset: 0;
   background: url("assets/backgrounds/hero-bg.png") center center / cover no-repeat;
 }
 .hero__character {
   position: fixed;
-  z-index: 2;
+  z-index: 9999;
   right: -3%;
-  bottom: -2%;
+  bottom: 8vh;
   width: min(68vw, 850px);
   height: 94vh;
   max-height: 980px;
@@ -291,7 +290,7 @@ a { color: inherit; }
   .hero__content { margin-top: 35px; }
   .hero__lead { font-size: 18px; width: 340px; }
   .hero__about { margin-top: 105px; width: 350px; font-size: 14px; }
-  .hero__character { right: 2%; width: min(47%, 680px); bottom: 10%; }
+  .hero__character { right: 2%; width: min(47%, 680px); bottom: 12vh; }
   .install { min-height: 760px; padding-top: 66px; }
   .steps { gap: 39px; }
 }
@@ -307,7 +306,7 @@ a { color: inherit; }
     height: 82vh;
     max-height: 760px;
     right: -20%;
-    bottom: -1%;
+    bottom: 8vh;
     opacity: .96;
   }
   .site-header { align-items: flex-start; }
@@ -365,7 +364,7 @@ a { color: inherit; }
   .hero__content { margin-top: 26px; }
   .hero__lead { width: 58%; max-width: 270px; font-size: 13px; }
   .hero__lead--second { margin-top: 16px; }
-  .hero__character { width: 100vw; height: 76vh; right: -32%; bottom: 0; max-height: 700px; opacity: .9; }
+  .hero__character { width: 100vw; height: 76vh; right: -32%; bottom: 9vh; max-height: 700px; opacity: .9; }
   .hero__about { position: relative; z-index: 1; width: 61%; margin-top: 82px; font-size: 9px; }
   .hero__actions { position: relative; z-index: 1; margin-top: 30px; }
   .image-button { font-size: 12px; }
@@ -395,7 +394,7 @@ a { color: inherit; }
 .hero::before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;
