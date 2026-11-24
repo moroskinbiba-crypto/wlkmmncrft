@@ -127,7 +127,7 @@ body::after {
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(100%, var(--page-width));
   margin: 14px auto 0;
   max-width: var(--page-width);
@@ -386,6 +386,7 @@ body::after {
 
 @media (max-width: 520px) {
   .hero { min-height: 760px; padding-inline: 24px; }
+  .hero::after { width: 88vw; background: linear-gradient(90deg, rgba(18, 8, 28, .68) 0%, rgba(25, 10, 36, .45) 62%, rgba(25, 10, 36, 0) 100%); }
   .site-header { align-items: center; }
   .brand { max-width: calc(100% - 48px); font-size: clamp(24px, 7vw, 32px); letter-spacing: -1.5px; }
   .menu-toggle {
@@ -460,6 +461,25 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+/* Левый затемняющий слой: помогает читать текст поверх фонового изображения. */
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 36vw;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 8, 28, .72) 0%,
+    rgba(25, 10, 36, .52) 48%,
+    rgba(25, 10, 36, .22) 76%,
+    rgba(25, 10, 36, 0) 100%
+  );
 }
 
 /* CSS-generated transition between the hero and installation backgrounds. */
