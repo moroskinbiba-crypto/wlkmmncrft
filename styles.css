@@ -81,13 +81,13 @@ body::after {
 .hero__character {
   position: fixed;
   z-index: 9999;
-  right: -8%;
+  right: -3%;
   top: 50%;
   bottom: auto;
   transform: translateY(-50%);
-  width: min(78vw, 980px);
-  height: 105vh;
-  max-height: 1180px;
+  width: min(68vw, 850px);
+  height: 94vh;
+  max-height: 980px;
   object-fit: contain;
   object-position: right center;
   image-rendering: pixelated;
@@ -101,7 +101,7 @@ body::after {
 }
 .site-header {
   position: relative;
-  z-index: 10000;
+  z-index: 2;
   width: min(100%, var(--page-width));
   margin: 0 auto;
   display: flex;
@@ -377,7 +377,7 @@ body::after {
   .hero__content { margin-top: 35px; }
   .hero__lead { font-size: 21px; width: 340px; }
   .hero__about { margin-top: 105px; width: 350px; font-size: 14px; }
-  .hero__character { right: -2%; top: 50%; bottom: auto; transform: translateY(-50%); width: min(62vw, 900px); height: 108vh; max-height: 1240px; object-position: right center; }
+  .hero__character { right: 2%; top: 50%; bottom: auto; transform: translateY(-50%); width: min(47%, 680px); object-position: right center; }
   .install { min-height: 760px; padding-top: 66px; }
   .steps { gap: 39px; }
 }
@@ -389,10 +389,10 @@ body::after {
   }
   .hero__background { background-position: 56% center; }
   .hero__character {
-    width: 125vw;
-    height: 94vh;
-    max-height: 900px;
-    right: -27%;
+    width: 82vw;
+    height: 82vh;
+    max-height: 760px;
+    right: -20%;
     top: 50%;
     bottom: auto;
     transform: translateY(-50%);
@@ -469,7 +469,7 @@ body::after {
   .hero__lead { width: 58%; max-width: 270px; font-size: 14px; }
   .hero__lead--second { margin-top: 16px; }
   body::after { right: -1%; bottom: 9vh; width: 35vw; height: 19px; }
-  .hero__character { width: 145vw; height: 100vh; right: -43%; top: 50%; bottom: auto; transform: translateY(-50%); object-position: right center; max-height: 940px; opacity: 1; }
+  .hero__character { width: 100vw; height: 76vh; right: -32%; top: 50%; bottom: auto; transform: translateY(-50%); object-position: right center; max-height: 700px; opacity: .9; }
   .hero__about { position: relative; z-index: 1; width: 61%; margin-top: 82px; font-size: 9px; }
   .hero__actions { position: relative; z-index: 1; margin-top: 30px; }
   .image-button { font-size: 12px; }
@@ -632,4 +632,33 @@ button:focus-visible {
 .step__download:active {
   transform: translateY(0) scale(.985);
   transition-duration: .12s;
+}
+
+
+/* Мягкое фиолетовое свечение по контуру Стива; геометрия изображения не меняется. */
+.hero__character {
+  filter:
+    drop-shadow(0 0 7px rgba(225, 168, 255, .58))
+    drop-shadow(0 0 18px rgba(164, 76, 255, .42))
+    drop-shadow(0 0 34px rgba(117, 42, 196, .25));
+  animation: steve-character-glow 4.2s ease-in-out infinite;
+}
+
+@keyframes steve-character-glow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 6px rgba(225, 168, 255, .48))
+      drop-shadow(0 0 15px rgba(164, 76, 255, .34))
+      drop-shadow(0 0 28px rgba(117, 42, 196, .2));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 10px rgba(235, 197, 255, .72))
+      drop-shadow(0 0 23px rgba(177, 91, 255, .52))
+      drop-shadow(0 0 42px rgba(117, 42, 196, .3));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__character { animation: none; }
 }
