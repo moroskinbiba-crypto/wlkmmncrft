@@ -425,10 +425,10 @@ a { color: inherit; }
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    #ed7858 0%,
-    rgba(237, 120, 88, .96) 14%,
-    rgba(237, 120, 88, .76) 38%,
-    rgba(237, 120, 88, .34) 72%,
+    rgba(112, 34, 127, .94) 0%,
+    rgba(112, 34, 127, .82) 18%,
+    rgba(160, 55, 125, .66) 38%,
+    rgba(203, 75, 112, .38) 65%,
     rgba(237, 120, 88, 0) 100%
   );
 }
