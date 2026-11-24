@@ -590,8 +590,8 @@ body::after {
 .github-mark,
 button {
   filter:
-    drop-shadow(0 0 5px rgba(224, 171, 255, .34))
-    drop-shadow(0 0 13px rgba(159, 72, 255, .24));
+    drop-shadow(0 0 10px rgba(224, 171, 255, .17))
+    drop-shadow(0 0 26px rgba(159, 72, 255, .12));
 }
 
 .main-nav a:hover,
@@ -603,9 +603,9 @@ button {
 button:hover {
   filter:
     brightness(1.08)
-    drop-shadow(0 0 7px rgba(241, 204, 255, .58))
-    drop-shadow(0 0 18px rgba(182, 89, 255, .43))
-    drop-shadow(0 0 29px rgba(126, 41, 209, .22));
+    drop-shadow(0 0 14px rgba(241, 204, 255, .29))
+    drop-shadow(0 0 36px rgba(182, 89, 255, .215))
+    drop-shadow(0 0 58px rgba(126, 41, 209, .11));
 }
 
 .main-nav a:focus-visible,
@@ -616,8 +616,8 @@ button:hover {
 .github-mark:focus-visible,
 button:focus-visible {
   filter:
-    drop-shadow(0 0 8px rgba(241, 204, 255, .65))
-    drop-shadow(0 0 20px rgba(182, 89, 255, .5));
+    drop-shadow(0 0 16px rgba(241, 204, 255, .325))
+    drop-shadow(0 0 40px rgba(182, 89, 255, .25));
 }
 
 .step__download {
