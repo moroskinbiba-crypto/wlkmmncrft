@@ -85,45 +85,57 @@
           continue;
         }
 
-        // У каждой частицы свой боковой снос, высота прыжка, падение и вращение.
-        const drift = randomBetween(-190, 190);
-        const lift = randomBetween(105, 215);
-        const fall = randomBetween(105, 245);
-        const launchX = drift * .2 + randomBetween(-24, 24);
-        const middleX = drift * .58 + randomBetween(-35, 35);
-        const twist = randomBetween(-420, 420);
-        const duration = randomBetween(820, 1280);
-        const delay = randomBetween(0, 110);
+        // Фаза 1: каждый алмаз плавно разлетается в собственном направлении.
+        const angle = randomBetween(0, Math.PI * 2);
+        const distance = randomBetween(75, 155);
+        const scatterX = Math.cos(angle) * distance;
+        const scatterY = Math.sin(angle) * distance;
+        const rotation = randomBetween(-300, 300);
+        const scatterDuration = randomBetween(300, 440);
+        const delay = randomBetween(0, 75);
 
-        const flight = diamond.animate(
+        const scatter = diamond.animate(
           [
             {
-              offset: 0,
               opacity: 0,
-              transform: 'translate3d(0, 0, 0) rotate(0deg) scale(.42)'
+              transform: 'translate3d(0, 0, 0) rotate(0deg) scale(.55)'
             },
             {
-              offset: .2,
               opacity: 1,
-              transform: `translate3d(${launchX}px, ${-lift}px, 0) rotate(${twist * .18}deg) scale(1.08)`,
-              easing: 'cubic-bezier(.12, .72, .22, 1)'
-            },
-            {
-              offset: .58,
-              opacity: .98,
-              transform: `translate3d(${middleX}px, ${-lift * .42}px, 0) rotate(${twist * .58}deg) scale(.82)`,
-              easing: 'cubic-bezier(.42, 0, .7, .45)'
-            },
-            {
-              offset: 1,
-              opacity: 0,
-              transform: `translate3d(${drift}px, ${fall}px, 0) rotate(${twist}deg) scale(.18)`
+              transform: `translate3d(${scatterX}px, ${scatterY}px, 0) rotate(${rotation * .55}deg) scale(1)`
             }
           ],
-          { duration, delay, fill: 'forwards', easing: 'ease-out' }
+          {
+            duration: scatterDuration,
+            delay,
+            fill: 'forwards',
+            easing: 'cubic-bezier(.16, .72, .25, 1)'
+          }
         );
 
-        flight.onfinish = () => diamond.remove();
+        // Фаза 2: после разлёта алмаз продолжает путь вниз под действием гравитации.
+        scatter.onfinish = () => {
+          const fallX = scatterX + randomBetween(-38, 38);
+          const fallY = scatterY + randomBetween(125, 205);
+          const fall = diamond.animate(
+            [
+              {
+                opacity: 1,
+                transform: `translate3d(${scatterX}px, ${scatterY}px, 0) rotate(${rotation * .55}deg) scale(1)`
+              },
+              {
+                opacity: 0,
+                transform: `translate3d(${fallX}px, ${fallY}px, 0) rotate(${rotation}deg) scale(.72)`
+              }
+            ],
+            {
+              duration: randomBetween(520, 760),
+              fill: 'forwards',
+              easing: 'cubic-bezier(.35, 0, .85, .55)'
+            }
+          );
+          fall.onfinish = () => diamond.remove();
+        };
       }
     };
 
