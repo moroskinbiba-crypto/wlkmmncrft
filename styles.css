@@ -73,9 +73,59 @@ body::after {
   object-fit: contain;
   object-position: right center;
   image-rendering: pixelated;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
   will-change: transform;
   transition: transform .18s ease-out;
+}
+.hero__character:focus-visible {
+  outline: 3px solid rgba(87, 240, 255, .95);
+  outline-offset: -8px;
+  filter: drop-shadow(0 0 12px rgba(66, 235, 255, .7));
+}
+.hero__character.is-mining {
+  animation: steve-mining .3s ease-out;
+}
+@keyframes steve-mining {
+  0%, 100% { transform: translateY(-50%) rotate(0) scale(1); }
+  28% { transform: translateY(-50%) rotate(-1.2deg) scale(.985); }
+  68% { transform: translateY(-50%) rotate(1deg) scale(1.012); }
+}
+
+/* Выпадающие из Стива алмазы. */
+.diamond-particle {
+  position: fixed;
+  z-index: 10002;
+  left: 0;
+  top: 0;
+  width: var(--size, 25px);
+  height: calc(var(--size, 25px) * 1.16);
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(78, 239, 255, .8));
+  transform: translate(-50%, -50%) scale(.25);
+  opacity: 0;
+  animation: diamond-drop var(--duration, 1100ms) cubic-bezier(.12, .55, .3, 1) forwards;
+}
+.diamond-particle svg { display: block; width: 100%; height: 100%; overflow: visible; }
+@keyframes diamond-drop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.2) rotate(0deg);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.12) rotate(12deg);
+  }
+  34% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(.72) rotate(var(--spin));
+  }
 }
 .site-header {
   position: relative;
