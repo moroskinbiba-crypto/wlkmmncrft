@@ -32,7 +32,7 @@ a { color: inherit; }
   position: relative;
   isolation: isolate;
   min-height: 730px;
-  overflow: hidden;
+  overflow: visible;
   padding: 30px max(7.6vw, 28px) 46px;
   background: #ef7757;
 }
@@ -40,30 +40,22 @@ a { color: inherit; }
   position: absolute;
   z-index: -3;
   inset: 0;
-  background-image: url("assets/backgrounds/hero-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(187, 51, 111, .13) 0%, rgba(235, 96, 83, .02) 56%, rgba(245, 119, 76, .08) 100%);
+  background: url("assets/backgrounds/hero-bg.png") center center / cover no-repeat;
 }
 .hero__character {
-  position: absolute;
-  z-index: -1;
-  right: -1.5%;
-  bottom: 12%;
-  width: min(51%, 650px);
-  max-height: 78%;
+  position: fixed;
+  z-index: 2;
+  right: -3%;
+  bottom: -2%;
+  width: min(68vw, 850px);
+  height: 94vh;
+  max-height: 980px;
   object-fit: contain;
   object-position: right bottom;
   image-rendering: pixelated;
   pointer-events: none;
+  will-change: transform;
+  transition: transform .18s ease-out;
 }
 .site-header {
   position: relative;
@@ -189,10 +181,12 @@ a { color: inherit; }
   min-height: 680px;
   padding: 48px max(5.4vw, 24px) 70px;
   background-color: #421448;
-  background-image: url("assets/backgrounds/install-bg.png"), linear-gradient(180deg, #752783 0%, #43154e 64%, #1d1024 100%);
+  background-image: url("assets/backgrounds/install-bg.png");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 }
 .install__inner { width: min(100%, var(--page-width)); margin: 0 auto; }
 .section-title {
@@ -309,10 +303,11 @@ a { color: inherit; }
   }
   .hero__background { background-position: 56% center; }
   .hero__character {
-    width: 58%;
-    max-height: 68%;
-    right: -8%;
-    bottom: 14%;
+    width: 82vw;
+    height: 82vh;
+    max-height: 760px;
+    right: -20%;
+    bottom: -1%;
     opacity: .96;
   }
   .site-header { align-items: flex-start; }
@@ -370,7 +365,7 @@ a { color: inherit; }
   .hero__content { margin-top: 26px; }
   .hero__lead { width: 58%; max-width: 270px; font-size: 13px; }
   .hero__lead--second { margin-top: 16px; }
-  .hero__character { width: 78%; right: -22%; bottom: 17%; max-height: 59%; opacity: .85; }
+  .hero__character { width: 100vw; height: 76vh; right: -32%; bottom: 0; max-height: 700px; opacity: .9; }
   .hero__about { position: relative; z-index: 1; width: 61%; margin-top: 82px; font-size: 9px; }
   .hero__actions { position: relative; z-index: 1; margin-top: 30px; }
   .image-button { font-size: 12px; }
