@@ -98,7 +98,8 @@ a { color: inherit; }
 .hero__lead {
   width: min(290px, 48%);
   margin: 0 0 17px;
-  font-size: 15px;
+  font-family: var(--pixel-font);
+  font-size: 18px;
   line-height: 1.28;
   text-shadow: 0 1px 1px rgba(112, 39, 93, .15);
 }
@@ -296,7 +297,7 @@ a { color: inherit; }
 @media (min-width: 1000px) {
   .hero { min-height: min(900px, 100vh); padding-top: 42px; }
   .hero__content { margin-top: 35px; }
-  .hero__lead { font-size: 18px; width: 340px; }
+  .hero__lead { font-size: 21px; width: 340px; }
   .hero__about { margin-top: 105px; width: 350px; font-size: 14px; }
   .hero__character { right: 2%; top: 50%; bottom: auto; transform: translateY(-50%); width: min(47%, 680px); object-position: right center; }
   .install { min-height: 760px; padding-top: 66px; }
@@ -324,7 +325,7 @@ a { color: inherit; }
   .brand { font-size: clamp(25px, 6.2vw, 39px); max-width: 75%; }
   .main-nav { gap: 15px; padding-top: 12px; font-size: 9px; }
   .hero__content { margin-top: 16px; }
-  .hero__lead { width: 48%; font-size: 14px; }
+  .hero__lead { width: 48%; font-size: 16px; }
   .hero__about { width: 48%; margin-top: 91px; font-size: 10px; }
   .hero__about p { margin-bottom: 21px; }
   .hero__actions { margin-top: 40px; gap: 15px; }
@@ -373,7 +374,7 @@ a { color: inherit; }
   .main-nav.is-open { display: flex; }
   .main-nav a { padding: 10px 12px; }
   .hero__content { margin-top: 26px; }
-  .hero__lead { width: 58%; max-width: 270px; font-size: 13px; }
+  .hero__lead { width: 58%; max-width: 270px; font-size: 14px; }
   .hero__lead--second { margin-top: 16px; }
   .hero__character { width: 100vw; height: 76vh; right: -32%; top: 50%; bottom: auto; transform: translateY(-50%); object-position: right center; max-height: 700px; opacity: .9; }
   .hero__about { position: relative; z-index: 1; width: 61%; margin-top: 82px; font-size: 9px; }
