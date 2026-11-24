@@ -635,27 +635,29 @@ button:focus-visible {
 }
 
 
-/* Мягкое фиолетовое свечение по контуру Стива; геометрия изображения не меняется. */
+/* Сдержанное переливающееся свечение вокруг Стива. */
 .hero__character {
   filter:
-    drop-shadow(0 0 7px rgba(225, 168, 255, .58))
-    drop-shadow(0 0 18px rgba(164, 76, 255, .42))
-    drop-shadow(0 0 34px rgba(117, 42, 196, .25));
-  animation: steve-character-glow 4.2s ease-in-out infinite;
+    drop-shadow(0 0 3px rgba(225, 168, 255, .28))
+    drop-shadow(0 0 7px rgba(164, 76, 255, .19))
+    drop-shadow(0 0 13px rgba(117, 42, 196, .12));
+  animation: steve-character-glow 5.5s ease-in-out infinite;
 }
 
 @keyframes steve-character-glow {
   0%, 100% {
     filter:
-      drop-shadow(0 0 6px rgba(225, 168, 255, .48))
-      drop-shadow(0 0 15px rgba(164, 76, 255, .34))
-      drop-shadow(0 0 28px rgba(117, 42, 196, .2));
+      drop-shadow(0 0 3px rgba(225, 168, 255, .24))
+      drop-shadow(0 0 7px rgba(164, 76, 255, .16))
+      drop-shadow(0 0 12px rgba(117, 42, 196, .1))
+      hue-rotate(-10deg);
   }
   50% {
     filter:
-      drop-shadow(0 0 10px rgba(235, 197, 255, .72))
-      drop-shadow(0 0 23px rgba(177, 91, 255, .52))
-      drop-shadow(0 0 42px rgba(117, 42, 196, .3));
+      drop-shadow(0 0 4px rgba(235, 197, 255, .34))
+      drop-shadow(0 0 10px rgba(177, 91, 255, .23))
+      drop-shadow(0 0 16px rgba(117, 42, 196, .14))
+      hue-rotate(14deg);
   }
 }
 
