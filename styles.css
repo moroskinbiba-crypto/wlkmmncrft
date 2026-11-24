@@ -181,10 +181,16 @@ a { color: inherit; }
 .install {
   min-height: 680px;
   padding: 48px max(5.4vw, 24px) 70px;
-  background-color: #421448;
-  background-image: url("assets/backgrounds/install-bg.png");
+  background-color: #000;
+  background-image: linear-gradient(
+    180deg,
+    #70227f 0%,
+    #4b1b5c 28%,
+    #24132f 62%,
+    #000 100%
+  );
   background-position: center top;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
@@ -423,14 +429,7 @@ a { color: inherit; }
   right: 0;
   height: clamp(260px, 34vh, 390px);
   pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(112, 34, 127, .94) 0%,
-    rgba(112, 34, 127, .82) 18%,
-    rgba(160, 55, 125, .66) 38%,
-    rgba(203, 75, 112, .38) 65%,
-    rgba(237, 120, 88, 0) 100%
-  );
+  background: transparent;
 }
 
 .install__inner {
