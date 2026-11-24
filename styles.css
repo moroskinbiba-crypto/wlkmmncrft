@@ -221,7 +221,7 @@ body::after {
   padding: 12px 24px;
   background: url("assets/ui/btn-ip.png") center / 100% 100% no-repeat;
   color: #fff;
-  font: 700 clamp(15px, 3.3vw, 25px)/1.1 var(--pixel-font);
+  font: 700 clamp(18px, 4vw, 30px)/1.1 var(--pixel-font);
   text-align: center;
   text-decoration: none;
   text-shadow: 2px 2px 0 rgba(111, 28, 103, .55);
@@ -475,7 +475,7 @@ body::after {
   .image-button { font-size: 12px; }
   .image-button--telegram { min-width: 185px; }
   .image-button--install { min-width: 126px; }
-  .server-address { width: 88%; min-width: 0; font-size: clamp(12px, 3.6vw, 17px); }
+  .server-address { width: 88%; min-width: 0; font-size: clamp(14px, 4.1vw, 20px); }
   .install { min-height: 690px; padding: 54px 24px 65px; background-position: center; }
   .section-title { font-size: 34px; margin-bottom: 42px; }
   .steps { gap: 38px; }
