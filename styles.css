@@ -245,7 +245,7 @@ a { color: inherit; }
   padding: 13px 18px 13px 23px;
   margin-left: 0;
   color: #fff;
-  font: 700 11px/1.35 var(--pixel-font);
+  font: 700 12px/1.35 var(--pixel-font);
   text-shadow: 1px 1px 0 rgba(125, 37, 104, .4);
   background-repeat: no-repeat;
   background-position: center;
@@ -401,7 +401,7 @@ a { color: inherit; }
   .steps { gap: 38px; }
   .step { padding-left: 12px; }
   .step__number { left: -3px; font-size: 45px; }
-  .step__card { font-size: 9px; padding-left: 20px; }
+  .step__card { font-size: 10px; padding-left: 20px; }
   .step__card--one { width: 205px; min-height: 72px; font-size: 13px; }
   .step__card--two { width: min(250px, 82vw); min-height: 96px; }
   .step__card--three { width: min(255px, 84vw); min-height: 119px; }
